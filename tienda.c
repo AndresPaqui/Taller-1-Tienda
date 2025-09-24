@@ -21,10 +21,30 @@ do
             scanf(" %s",&ID);
             printf("Ingresar nombre del producto -> ");
             scanf(" %s",&nombre);
-            printf("Cantidad en stock -> ");
-            scanf("%d",&stock);
-            printf("Precio Unitario -> ");
-            scanf("%f",&PrecioU);
+            do
+            {
+                printf("Cantidad en stock -> ");
+                scanf("%d",&stock);
+
+                if (stock <= 0)
+                {
+                    printf("Ingrese una cantidad de stock valida\n");
+                }
+                
+            } while (stock <= 0);
+            
+             do
+            {
+                printf("Precio Unitario -> ");
+                scanf("%f",&PrecioU);
+
+                if (PrecioU <= 0)
+                {
+                    printf("El precio unitario debe ser mayor a 0\n");
+                }
+                
+            } while (PrecioU <= 0);
+
 
             printf("**Producto agregado**");
             break;
@@ -34,6 +54,12 @@ do
                 printf("Cantidad de producto que desea vender ");
                 printf("\nIngrese un numero entero -> "); 
                 scanf("%d", & cantidad);
+
+                if (cantidad<=0)
+                {
+                    printf("Error, cantidad erronea.\n");
+                }
+                
             } while(cantidad<=0);
             
             if(cantidad > stock) {
@@ -51,6 +77,12 @@ do
                 printf("\nla cantidad de stock es %d", stock);
                 printf("\nCantidad de stock que desea agregar -> ");
                 scanf("%d", &segundoS); 
+
+                if (segundoS<0)
+                {
+                    printf("Error, cantidad no aceptada, intente nuevamente.\n");
+                }
+                
             } while(segundoS<0);
             
             stock=stock+segundoS;
