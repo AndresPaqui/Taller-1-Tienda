@@ -3,7 +3,7 @@ Fecha: 6 de junio del 2025
 Descripcion: el codigo crea un numero random del 1 al 100 
 despues pide que ingresen un numero para adivinar si llegan a acertar al numero generado antiguamente
 el codigo da 3 intentos y  si no lo logran manda un mensaje que perdio
-pero si lo logra le manda un mensaje que acerto y acaba con el ciclo
+pero si lo logra le manda un mensaje que acerto y acaba con el ciclo ADDDDDD
 */
 #include <stdio.h>
 #include <stdlib.h>  //genera numeros aleatorios
